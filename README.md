@@ -1,5 +1,27 @@
 ## clone project resh api
 
+```
+git clone https://github.com/NasDev07/ecommerce-app-server.git
+```
+
+#### masuk ke folder project
+
+```
+cd nama folder
+```
+
+#### Install Composer dan Node JS
+
+```
+composer install
+```
+
+```
+npm install
+```
+
+jika kamu bidung cara clone kunjugi YouTube : https://youtu.be/VOrDcsPlKzQ
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
