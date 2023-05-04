@@ -41,6 +41,24 @@ class AuthController extends Controller
         return response()->json(['message' => 'User created successfully']);
     }
 
+    // public function login(Request $request)
+    // {
+    //     $request->validate([
+    //         'email' => 'required|email',
+    //         'password' => 'required',
+    //     ]);
+
+    //     $user = User::where('email', $request->email)->first();
+
+    //     if (!$user || !Hash::check($request->password, $user->password)) {
+    //         throw ValidationException::withMessages([
+    //             'email' => ['The provided credentials are incorrect.'],
+    //         ]);
+    //     }
+
+    //     return $user->createToken('user login')->plainTextToken;
+    // }
+
     public function login(Request $request)
     {
         $request->validate([
@@ -56,8 +74,9 @@ class AuthController extends Controller
             ]);
         }
 
-        return $user->createToken('user login')->plainTextToken;
+        return response()->json(['message' => 'Successfully logged in.']);
     }
+
 
     public function logout(Request $request)
     {
@@ -65,8 +84,9 @@ class AuthController extends Controller
         return "Logout Berhasil";
     }
 
-    public function me(Request $request)
+
+    public function me(Request $request, string $id)
     {
-        return response()->json(Auth::user());
+        return response()->json(Auth::user($id));
     }
 }
